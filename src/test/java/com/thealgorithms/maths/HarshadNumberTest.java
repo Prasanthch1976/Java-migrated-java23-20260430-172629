@@ -128,7 +128,7 @@ class HarshadNumberTest {
         // This specific number may or may not be Harshad, just testing it doesn't crash
         try {
             HarshadNumber.isHarshad(largeHarshadCandidate);
-        } catch (Exception e) {
+        } catch (Exception e) { // TODO: Consider catching specific exception types
             Assertions.fail("Should not throw exception for valid large numbers");
         }
     }

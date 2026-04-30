@@ -61,7 +61,7 @@ class EulerPseudoprimeTest {
         Runnable invokeJacobi = () -> {
             try {
                 method.invoke(null, BigInteger.valueOf(2), BigInteger.valueOf(8));
-            } catch (Exception e) {
+            } catch (Exception e) { // TODO: Consider catching specific exception types
                 // unwrap
                 Throwable cause = e.getCause();
                 if (cause instanceof IllegalArgumentException) {
@@ -79,7 +79,7 @@ class EulerPseudoprimeTest {
         Runnable invokeJacobi2 = () -> {
             try {
                 method.invoke(null, BigInteger.valueOf(5), BigInteger.valueOf(-3));
-            } catch (Exception e) {
+            } catch (Exception e) { // TODO: Consider catching specific exception types
                 Throwable cause = e.getCause();
                 if (cause instanceof IllegalArgumentException) {
                     throw (IllegalArgumentException) cause;
